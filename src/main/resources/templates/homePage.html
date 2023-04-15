@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 2.2</title>
+</head>
+<body>
+    <p>JOB VACANCIES</p>
+    <ul>
+        <th:block th:each="v : ${vacancy}">
+            <li th:utext = "${v}"></li>
+        </th:block>
+    </ul>
+
+<form method="post">
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="description" placeholder="Description">
+    <input type="text" name="required_experience" placeholder="Required experience">
+    <input type="text" name="diploma" placeholder="Diploma (boolean)">
+    <input type="text" name="salary" placeholder="Salary">
+    <button type="submit">ADD</button>
+</form>
+</body>
+</html>
